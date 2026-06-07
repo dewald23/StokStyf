@@ -1,0 +1,1367 @@
+<!doctype html>
+<html lang="af" class="scroll-smooth bg-black text-white antialiased">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stokstyf | Premium Manlike Stamina &amp; Woema Formule</title>
+    
+    <!-- Google Fonts: Inter, Space Grotesk & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Vector Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Theme Customization -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              stokstyf: {
+                orange: '#f97316',
+                orangeDark: '#c2410c',
+                carbon: '#0c0c0e',
+                slate: '#1a1a24'
+              }
+            },
+            animation: {
+              'shimmer': 'shimmer 2s infinite',
+              'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              shimmer: {
+                '100%': { transform: 'translateX(100%)' },
+              },
+              'pulse-glow': {
+                '0%, 100%': {
+                  opacity: '1',
+                  boxShadow: '0 0 15px rgba(249, 115, 22, 0.4)'
+                },
+                '50%': {
+                  opacity: '0.8',
+                  boxShadow: '0 0 25px rgba(249, 115, 22, 0.7)'
+                }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Ensure scrollbar matches premium dark theme */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #030303;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #f97316;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ea580c;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white font-sans overflow-x-hidden selection:bg-orange-500 selection:text-black">
+
+    <!-- AGE GATE VERIFICATION MODAL (CRO & Supplement Compliance) -->
+    <div id="age-gate" class="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-xl">
+      <div class="relative w-full max-w-lg p-8 mx-4 text-center bg-neutral-950 border border-orange-500/30 rounded-2xl shadow-[0_0_50px_rgba(249,115,22,0.15)] overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-700"></div>
+        <div class="mb-6">
+          <span class="text-orange-500 text-6xl block mb-2"><i class="fa-solid fa-shield-halved"></i></span>
+          <h2 class="font-display text-2xl font-bold uppercase tracking-wider text-white">Ouderdom Verifikasie</h2>
+          <p class="text-xs text-orange-500 font-mono tracking-widest uppercase mt-1">Stokstyf Prestasie Reeks</p>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-8">
+          Hierdie webwerf bevat inligting oor uiterste manlike prestasieformulerings en is uitsluitlik bedoel vir volwassenes. Is jy 18 jaar of ouer?
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button onclick="acceptAge()" class="px-8 py-3.5 bg-orange-500 hover:bg-orange-600 text-black font-display font-bold uppercase tracking-widest text-sm rounded-lg transition-all duration-300 transform active:scale-95 shadow-lg shadow-orange-500/20">
+            Ja, Ek is 18+
+          </button>
+          <button onclick="window.location.href='https://google.com'" class="px-8 py-3.5 border border-neutral-800 hover:border-neutral-700 text-slate-400 font-display font-bold uppercase tracking-widest text-sm rounded-lg transition-all duration-300">
+            Nee, Gaan weg
+          </button>
+        </div>
+        <p class="text-[10px] text-slate-500 mt-6 font-mono">
+          Veldpharm Gehaltebeheerde Aanvullings &bull; Gansbaai, Suid-Afrika
+        </p>
+      </div>
+    </div>
+
+    <!-- REAL-TIME TIMED URGENCY TOP BAR -->
+    <div class="bg-gradient-to-r from-neutral-950 via-orange-950 to-neutral-950 border-b border-orange-500/20 py-2 sm:py-2.5 px-4 text-center relative z-20 overflow-hidden">
+      <div class="container mx-auto flex flex-col sm:flex-row justify-center items-center gap-2 text-xs">
+        <div class="flex items-center gap-1.5 text-orange-500 font-bold tracking-wide">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+          </span>
+          <span class="font-mono uppercase">BEPERKTE VOORRAAD VANAF VELDPHARM:</span>
+        </div>
+        <p class="text-neutral-200 font-medium">Kry GRATIS diskrete aflewering vir alle bestellings oor R500!</p>
+        <div class="bg-black/40 border border-orange-500/30 px-2 py-0.5 rounded font-mono text-orange-500 font-bold ml-1 flex items-center gap-1 mt-1 sm:mt-0">
+          <i class="fa-regular fa-clock text-[10px]"></i>
+          <span id="countdown">14:42</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 1: STICKY NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-neutral-950/90 border-b border-neutral-900 transition-all duration-300" id="sticky-header">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+        <!-- Logo Branding -->
+        <a href="#hero" class="flex items-center gap-2 group">
+          <span class="font-display font-extrabold text-2xl tracking-tighter text-white group-hover:text-orange-500 transition-colors uppercase">
+            STOKSTYF<span class="text-orange-500">.</span>
+          </span>
+          <span class="hidden sm:inline-block px-2 py-0.5 border border-orange-500/40 text-[10px] font-mono text-orange-500 font-bold uppercase rounded-md">
+            Woema Lineup
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#kombinasies" class="text-xs uppercase font-mono tracking-widest text-slate-300 hover:text-orange-500 transition-colors">
+            Kombinasie Pakkette
+          </a>
+          <a href="#formule" class="text-xs uppercase font-mono tracking-widest text-slate-300 hover:text-orange-500 transition-colors">
+            Die Woema Formule
+          </a>
+          <a href="#versending" class="text-xs uppercase font-mono tracking-widest text-slate-300 hover:text-orange-500 transition-colors">
+            Diskrete Versending
+          </a>
+        </nav>
+
+        <!-- Dynamic Header CTA Button -->
+        <div>
+          <a href="#kombinasies" class="relative group inline-flex items-center justify-center px-5 py-2.5 bg-orange-500 hover:bg-orange-600 text-black font-display text-xs font-black uppercase tracking-wider rounded-lg transition-all duration-300 border border-orange-500">
+            <span class="relative z-10 flex items-center gap-1.5">
+              Bestel Nou <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 2: HIGH-IMPACT HERO SONE -->
+    <section id="hero" class="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden py-16 lg:py-24 border-b border-neutral-900 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-900/60 via-black to-black">
+      
+      <!-- Subtle Tech grid background in styling overlay -->
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293708_1px,transparent_1px),linear-gradient(to_bottom,#1f293708_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Left Column: Afrikaans Copy and Brand Promise -->
+          <div class="lg:col-span-7 flex flex-col justify-center space-y-6 text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-orange-950/40 border border-orange-500/30 text-xs text-orange-500 font-mono tracking-widest uppercase rounded-full w-fit">
+              <i class="fa-solid fa-flask-vial"></i> KLINIESE MANLIKE ENERGIE FORMULE
+            </div>
+            
+            <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-white leading-[1.05]">
+              Ontsluit Peak Prestasie <span class="text-orange-500">&amp;</span> Intense Stamina.
+            </h1>
+            
+            <p class="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed">
+              Kry jou onderlyf <b class="text-white">stokstyf</b> en hou die woema lewendig. Veldpharm se wetenskaplik geformuleerde manlike prestasie-reeks lewer rotsvaste uithouvermoë, maksimale ejakulasiebeheer en onstuitbare vitaliteit.
+            </p>
+
+            <!-- Key Feature Inline Bullet Row -->
+            <div class="grid grid-cols-2 gap-y-3 gap-x-4 max-w-lg pt-2">
+              <div class="flex items-center gap-2.5 text-sm text-slate-300">
+                <span class="text-orange-500 text-base"><i class="fa-solid fa-circle-check"></i></span>
+                <span>Mond-geabsorbeer &bull; Kitswerkend</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-sm text-slate-300">
+                <span class="text-orange-500 text-base"><i class="fa-solid fa-circle-check"></i></span>
+                <span>Laboratorium Getoets</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-sm text-slate-300">
+                <span class="text-orange-500 text-base"><i class="fa-solid fa-circle-check"></i></span>
+                <span>Inheems &amp; Veilig</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-sm text-slate-300">
+                <span class="text-orange-500 text-base"><i class="fa-solid fa-circle-check"></i></span>
+                <span>100% Diskreet Gewaarborg</span>
+              </div>
+            </div>
+
+            <!-- CTA Actions Layout -->
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+              <a href="#kombinasies" class="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-black font-display font-extrabold uppercase tracking-widest text-sm rounded-lg transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl shadow-orange-500/20 text-center flex items-center justify-center gap-2 border-2 border-orange-500">
+                Kry Jou Kombinasie <i class="fa-solid fa-fire-flame-curved"></i>
+              </a>
+              <a href="#formule" class="px-8 py-4 border-2 border-neutral-800 hover:border-orange-500/50 hover:text-orange-500 text-white font-display font-extrabold uppercase tracking-widest text-sm rounded-lg transition-all duration-300 text-center">
+                Lees Meer
+              </a>
+            </div>
+
+            <!-- Authentic Social Proof Star Row -->
+            <div class="flex items-center gap-3 pt-4 border-t border-neutral-900 w-fit">
+              <div class="flex gap-1 text-orange-500 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-xs text-slate-400 font-mono tracking-tight">
+                <b class="text-white">4.9 / 5.0</b> (Meer as <b class="text-orange-500">12,400+</b> aktiewe Suid-Afrikaanse mans)
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Ultra-Premium Custom CSS 3D Mockup Container -->
+          <div class="lg:col-span-5 relative flex justify-center items-center py-8 lg:py-0">
+            <!-- Neon background glow sphere -->
+            <div class="absolute w-[300px] h-[300px] bg-orange-500/10 rounded-full blur-[80px]"></div>
+
+            <div class="relative w-full max-w-sm aspect-[4/5] bg-gradient-to-br from-neutral-900 to-neutral-950 rounded-3xl p-6 sm:p-8 border border-neutral-800/80 shadow-[0_30px_60px_rgba(0,0,0,0.8),0_0_50px_rgba(249,115,22,0.1)] flex flex-col justify-between overflow-hidden group">
+              <!-- Grid background line inside mockup -->
+              <div class="absolute inset-0 bg-[radial-gradient(#f973160b_1px,transparent_1px)] bg-[size:1.5rem_1.5rem]"></div>
+              
+              <!-- Orange Highlight corner bars -->
+              <div class="absolute top-0 right-0 w-24 h-24 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-orange-500/20 via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 w-24 h-24 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-orange-500/10 via-transparent to-transparent"></div>
+
+              <!-- Top Mockup Header Bar -->
+              <div class="flex justify-between items-start relative z-10">
+                <div>
+                  <p class="text-[10px] font-mono tracking-widest text-orange-500 uppercase">PREMIUM PACKAGING</p>
+                  <h3 class="font-display text-lg font-black tracking-tight text-white uppercase mt-0.5">VELDPHARM LABS</h3>
+                </div>
+                <div class="bg-black/50 border border-neutral-800 px-2.5 py-1 rounded text-[10px] font-mono tracking-tight text-slate-400">
+                  EST. 2024
+                </div>
+              </div>
+
+              <!-- Center Graphic: Overlapping supplements visualization -->
+              <div class="relative py-8 flex flex-col space-y-4 items-center justify-center">
+                
+                <!-- Box 1: STOKSTYF ELKE DAG -->
+                <div class="w-[85%] bg-neutral-950 border border-neutral-800 rounded-xl p-4 shadow-xl transform -rotate-2 -translate-y-2 group-hover:rotate-0 group-hover:translate-y-0 transition-all duration-500">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[10px] uppercase font-mono tracking-widest text-orange-500">DAILY PILLS</span>
+                    <i class="fa-solid fa-cube text-xs text-orange-500/50"></i>
+                  </div>
+                  <h4 class="font-display text-sm font-bold tracking-widest text-white uppercase mt-1">STOKSTYF ELKE DAG</h4>
+                  <div class="mt-2.5 flex items-center justify-between gap-2">
+                    <div class="h-1 w-full bg-neutral-900 rounded-full overflow-hidden">
+                      <div class="h-full bg-orange-500 rounded-full w-[70%]"></div>
+                    </div>
+                    <span class="text-[9px] font-mono text-slate-500">STAMINA</span>
+                  </div>
+                </div>
+
+                <!-- Box 2: WOEMA ORAL JELLY -->
+                <div class="w-[85%] bg-gradient-to-r from-neutral-950 to-neutral-900 border border-orange-500/30 rounded-xl p-4 shadow-2xl transform rotate-3 translate-x-2 translate-y-1 group-hover:rotate-0 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 shadow-orange-500/5">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[10px] uppercase font-mono tracking-widest text-orange-500">FAST WORK</span>
+                    <span class="px-1.5 py-0.5 bg-orange-500 text-black text-[8px] font-mono font-bold rounded">HOT</span>
+                  </div>
+                  <h4 class="font-display text-sm font-bold tracking-widest text-white uppercase mt-1">WOEMA JELLIE PACK</h4>
+                  <div class="mt-2.5 flex items-center justify-between gap-2">
+                    <div class="h-1 w-full bg-neutral-900 rounded-full overflow-hidden">
+                      <div class="h-full bg-orange-500 rounded-full w-full"></div>
+                    </div>
+                    <span class="text-[9px] font-mono text-orange-500 font-bold animate-pulse">RAPID</span>
+                  </div>
+                </div>
+                
+              </div>
+
+              <!-- Bottom Mockup Details -->
+              <div class="border-t border-neutral-900 pt-4 flex justify-between items-center relative z-10">
+                <div class="text-left">
+                  <span class="block text-[8px] font-mono tracking-wider text-slate-500 uppercase">VOLTOOI REEKS</span>
+                  <p class="text-xs font-bold text-slate-300">100% Natuurlike Ekstrakte</p>
+                </div>
+                <!-- Mini Verification Seal representation -->
+                <div class="flex items-center gap-1.5">
+                  <div class="text-orange-500 text-lg"><i class="fa-solid fa-shield-halved"></i></div>
+                  <span class="text-[9px] font-mono text-slate-400 uppercase tracking-wider leading-none">SAHPRA<br>COMPLIANT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TRUST INFRASTRUCTURE BAR -->
+    <div class="bg-neutral-950 border-b border-neutral-900">
+      <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 md:divide-x md:divide-neutral-900">
+          
+          <!-- Trust point 1 -->
+          <div class="flex items-start gap-4 px-4">
+            <div class="text-orange-500 text-2xl mt-1 shrink-0"><i class="fa-solid fa-box"></i></div>
+            <div class="text-left">
+              <h4 class="font-display text-sm font-bold uppercase tracking-wider text-white">Diskrete Nasionale Versending</h4>
+              <p class="text-xs text-slate-400 leading-relaxed mt-1">
+                Gewone, ongemerkte pakkies sonder enige herkenbare name of logo's. Slegs die naam 'Veldpharm' op die koerier-etiket.
+              </p>
+            </div>
+          </div>
+
+          <!-- Trust point 2 -->
+          <div class="flex items-start gap-4 px-4">
+            <div class="text-orange-500 text-2xl mt-1 shrink-0"><i class="fa-solid fa-lock"></i></div>
+            <div class="text-left">
+              <h4 class="font-display text-sm font-bold uppercase tracking-wider text-white">Veilige Suid-Afrikaanse Checkout</h4>
+              <p class="text-xs text-slate-400 leading-relaxed mt-1">
+                Kriptografies beveiligde, geënkripteerde betalingstelsels. Volledige Stitch-integrasie vir direkte bank- en kaartveiligheid.
+              </p>
+            </div>
+          </div>
+
+          <!-- Trust point 3 -->
+          <div class="flex items-start gap-4 px-4">
+            <div class="text-orange-500 text-2xl mt-1 shrink-0"><i class="fa-solid fa-flask-vial"></i></div>
+            <div class="text-left">
+              <h4 class="font-display text-sm font-bold uppercase tracking-wider text-white">Veldpharm Gehaltebeheer</h4>
+              <p class="text-xs text-slate-400 leading-relaxed mt-1">
+                Kliniese manlike vitale formulerings en kragtige kruie-anabolika vervaardig onder die hoogste Suid-Afrikaanse regulasies.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONVERSION ANCHOR SECTION: THE STOKSTYF COLLECTION -->
+    <section id="kombinasies" class="py-20 lg:py-28 bg-black relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-orange-950/30 border border-orange-500/20 text-[10px] text-orange-500 font-mono tracking-widest uppercase rounded-full">
+            OFFISIËLE ENERGIE-COMBOS
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-white">
+            Kies Jou Stokstyf Kombinasie
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Kies jou gevegspakket en aktiveer onstuitbare uithouvermoë binne minute. Elke pakket bevat ons gesogte kliniese herstel-formulerings teen 'n massiewe afslag.
+          </p>
+        </div>
+
+        <!-- DUAL MULTI-OFFER PRICING MATRIX -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto items-stretch">
+          
+          <!-- CARD 1: DIE STAATMAKER COMBO PACK -->
+          <div class="relative bg-neutral-950/80 border border-neutral-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-neutral-700/80 group">
+            
+            <!-- Top Card Header -->
+            <div class="space-y-4">
+              <!-- Discount Pill Badge -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-orange-500 text-black text-xs font-mono font-black uppercase tracking-wider rounded-md">
+                  Spaar R101
+                </span>
+                <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">
+                  Voltooi Herstel
+                </span>
+              </div>
+              
+              <div class="text-left">
+                <h3 class="font-display text-2xl font-black text-white uppercase tracking-tight">Die Staatmaker Combo Pack</h3>
+                <p class="text-xs text-slate-400 mt-1">Kombinasie van elke produk in ons bekroonde manlike stamina-arsenaal.</p>
+              </div>
+
+              <!-- Prices Display -->
+              <div class="py-4 border-y border-neutral-900 flex items-baseline gap-2 text-left">
+                <span class="text-4xl font-display font-black text-white">R299.00</span>
+                <span class="text-slate-500 text-sm line-through font-mono">R400.00</span>
+                <span class="text-[11px] text-orange-500 font-mono ml-auto">Eenmalig &bull; +R100 Koerier (Gratis oor R500)</span>
+              </div>
+
+              <!-- Product Breakdown Checklist - Orange ticks only (strictly NO green!) -->
+              <div class="space-y-3 pt-2 text-left">
+                <p class="text-[10px] font-mono tracking-widest text-slate-400 uppercase">WAT JY KRY:</p>
+                <ul class="space-y-2.5">
+                  <li class="flex items-start gap-2.5 text-xs text-slate-300">
+                    <span class="text-orange-500 mt-0.5 shrink-0"><i class="fa-solid fa-check"></i></span>
+                    <span><b>1x Elke Dag Kapsules</b> (Daaglikse krag, basislyn testosteroonsirkulasie en vitaliteit)</span>
+                  </li>
+                  <li class="flex items-start gap-2.5 text-xs text-slate-300">
+                    <span class="text-orange-500 mt-0.5 shrink-0"><i class="fa-solid fa-check"></i></span>
+                    <span><b>1x Woema Koffie</b> (Snoepie oggendprestasieblend ryk aan stamina-kruie, kits-energie)</span>
+                  </li>
+                  <li class="flex items-start gap-2.5 text-xs text-slate-300">
+                    <span class="text-orange-500 mt-0.5 shrink-0"><i class="fa-solid fa-check"></i></span>
+                    <span><b>1x Woema Jellie</b> (Vinnig-absorberende orale jellie, nul wagtyd vir skielike aksie)</span>
+                  </li>
+                  <li class="flex items-start gap-2.5 text-xs text-slate-300">
+                    <span class="text-orange-500 mt-0.5 shrink-0"><i class="fa-solid fa-check"></i></span>
+                    <span><b>1x Woema Kapsules</b> (Kragtige anabolika vir spesiale geleenthede en uiterste stamina)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CTA Action Checkout Node -->
+            <div class="pt-8">
+              <a href="https://stokstyf.co.za/cart/STAATMAKER_COMBO_VARIANT_ID:1?checkout" class="w-full py-4 bg-orange-500 hover:bg-orange-600 text-black font-display font-black text-sm uppercase tracking-widest rounded-lg transition-all duration-300 flex items-center justify-center gap-2 border border-orange-500 shadow-md">
+                BESTEL STAATMAKER NOU <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+              <div class="mt-4 flex items-center justify-center gap-4 text-[10px] text-slate-400 font-mono">
+                <span><i class="fa-solid fa-truck-fast"></i> 100% Diskrete Koerier</span>
+                <span>&bull;</span>
+                <span><i class="fa-solid fa-shield-halved"></i> Sewe Stitch Veilige Gateway</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CARD 2: HEELTYD SPEELTYD COMBO - THE HERO FOCUS CARD -->
+          <div class="relative bg-neutral-950 border-2 border-orange-500 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 shadow-[0_0_50px_rgba(249,115,22,0.15)] transform scale-[1.01] sm:scale-105 z-10 group" id="speeltyd-box">
+            
+            <!-- Absolute top-center orange neon badge -->
+            <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-orange-500 text-black font-display text-[9px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+              Maksimum Seksuele Energie
+            </div>
+
+            <div class="space-y-4 pt-2">
+              <!-- Discount Pill Badge & Ticker -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-orange-500 text-black text-xs font-mono font-black uppercase tracking-wider rounded-md">
+                  Spaar R50
+                </span>
+                <span class="inline-flex items-center gap-1 text-[9px] font-mono text-orange-400 uppercase tracking-widest font-bold">
+                  <span class="h-1.5 w-1.5 rounded-full bg-orange-500 animate-pulse"></span> GEWILDSTE KOMBIE
+                </span>
+              </div>
+              
+              <div class="text-left">
+                <h3 class="font-display text-2xl font-black text-white uppercase tracking-tight">Heeltyd Speeltyd Combo</h3>
+                <p class="text-xs text-slate-300 mt-1">Uiterste kragpakket gefokus op ultra-vinnige absorbsie vir onbeperkte speeltyd.</p>
+              </div>
+
+              <!-- Prices Display -->
+              <div class="py-4 border-y border-neutral-900 flex items-baseline gap-2 text-left">
+                <span class="text-4xl font-display font-black text-white text-orange-500">R199.00</span>
+                <span class="text-slate-500 text-sm line-through font-mono">R249.00</span>
+                <span class="text-[11px] text-orange-500 font-mono ml-auto">Eenmalig &bull; +R100 Koerier (Gratis oor R500)</span>
+              </div>
+
+              <!-- Product Breakdown Checklist - Orange ticks only (strictly NO green!) -->
+              <div class="space-y-3 pt-2 text-left">
+                <p class="text-[10px] font-mono tracking-widest text-orange-400">WAT JY KRY:</p>
+                <ul class="space-y-2.5">
+                  <li class="flex items-start gap-2.5 text-xs text-slate-200">
+                    <span class="text-orange-500 mt-0.5 shrink-0"><i class="fa-solid fa-fire-flame-curved"></i></span>
+                    <span><b>2x Woema Kapsules</b> (Gerigte uiterste uithouvermoë vir die dapper manne)</span>
+                  </li>
+                  <li class="flex items-start gap-2.5 text-xs text-slate-200">
+                    <span class="text-orange-500 mt-0.5 shrink-0"><i class="fa-solid fa-fire-flame-curved"></i></span>
+                    <span><b>2x Woema Koffie</b> (Snoepie oggendprestasie kuns-blend vir kits woema)</span>
+                  </li>
+                  <li class="flex items-start gap-2.5 text-xs text-slate-200">
+                    <span class="text-orange-500 mt-0.5 shrink-0"><i class="fa-solid fa-fire-flame-curved"></i></span>
+                    <span><b>2x Woema Jellie</b> (Kits-werking mondelike jellieruiter met nul wagtyd)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CTA Action Checkout Node -->
+            <div class="pt-8">
+              <a href="https://stokstyf.co.za/cart/SPEELTYD_COMBO_VARIANT_ID:1?checkout" class="relative overflow-hidden w-full py-4.5 bg-orange-500 hover:bg-orange-600 text-black font-display font-black text-sm uppercase tracking-widest rounded-lg transition-all duration-300 flex items-center justify-center gap-2 border border-orange-500 shadow-xl shadow-orange-500/20 active:scale-95">
+                <span class="relative z-10 flex items-center gap-2">
+                  BESTEL SPEELTYD NOU <i class="fa-solid fa-bolt"></i>
+                </span>
+                <!-- Shimmer background transition sweep -->
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-[shimmer_2.5s_infinite]"></div>
+              </a>
+              <div class="mt-4 flex items-center justify-center gap-4 text-[10px] text-slate-300 font-mono">
+                <span><i class="fa-solid fa-shield-halved text-orange-500"></i> Bestel 100% Diskreeter</span>
+                <span>&bull;</span>
+                <span><i class="fa-solid fa-shield-halved text-orange-500"></i> Geaffilieer met Veldpharm</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- DYNAMIC BUNDLER & FREE SHIPPING METER -->
+        <div class="mt-16 bg-neutral-950 border border-neutral-900 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto relative overflow-hidden">
+          <!-- Ambient glowing background -->
+          <div class="absolute -top-12 -right-12 w-48 h-48 bg-orange-500/5 rounded-full blur-2xl"></div>
+          
+          <div class="flex flex-col lg:flex-row items-stretch justify-between gap-8 relative z-10">
+            <!-- Left Side: Product selectors with quantities -->
+            <div class="lg:w-3/5 space-y-6 text-left flex flex-col justify-between">
+              <div>
+                <h4 class="font-display text-lg font-black text-white uppercase tracking-wider flex items-center gap-2">
+                  <span class="text-orange-500"><i class="fa-solid fa-calculator animate-pulse"></i></span> Interaktiewe Bestelrekenaar
+                </h4>
+                <p class="text-xs text-slate-400 mt-1">Bou jou eie droom-kombinasie. Kyk hoe jou nasionale afleweringstotaal dadelik na R0 val sodra jou mandjie R500 oorskry!</p>
+              </div>
+
+              <div class="space-y-3">
+                <!-- Item 1 Selector Row -->
+                <div class="flex items-center justify-between p-3.5 bg-black/60 border border-neutral-900 rounded-xl hover:border-neutral-800 transition-colors">
+                  <div>
+                    <h5 class="text-xs uppercase tracking-wider font-bold text-white font-mono">Die Staatmaker Pack</h5>
+                    <p class="text-xs text-orange-500 font-bold font-mono mt-0.5">R299.00 elk</p>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <button onclick="changeBasketQty('staatmaker', -1)" class="w-8 h-8 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white font-bold flex items-center justify-center border border-neutral-800 transition-colors cursor-pointer select-none">
+                      <i class="fa-solid fa-minus text-[10px]"></i>
+                    </button>
+                    <span id="staatmaker-qty" class="font-mono text-sm font-black text-white w-6 text-center">0</span>
+                    <button onclick="changeBasketQty('staatmaker', 1)" class="w-8 h-8 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white font-bold flex items-center justify-center border border-neutral-800 transition-colors cursor-pointer select-none">
+                      <i class="fa-solid fa-plus text-[10px]"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Item 2 Selector Row -->
+                <div class="flex items-center justify-between p-3.5 bg-black/60 border border-neutral-900 rounded-xl hover:border-neutral-800 transition-colors">
+                  <div>
+                    <h5 class="text-xs uppercase tracking-wider font-bold text-white font-mono">Heeltyd Speeltyd Combo</h5>
+                    <p class="text-xs text-orange-500 font-bold font-mono mt-0.5">R199.00 elk</p>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <button onclick="changeBasketQty('speeltyd', -1)" class="w-8 h-8 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white font-bold flex items-center justify-center border border-neutral-800 transition-colors cursor-pointer select-none">
+                      <i class="fa-solid fa-minus text-[10px]"></i>
+                    </button>
+                    <span id="speeltyd-qty" class="font-mono text-sm font-black text-white w-6 text-center">1</span>
+                    <button onclick="changeBasketQty('speeltyd', 1)" class="w-8 h-8 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white font-bold flex items-center justify-center border border-neutral-800 transition-colors cursor-pointer select-none">
+                      <i class="fa-solid fa-plus text-[10px]"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-[10px] text-slate-500 font-mono flex items-center gap-1.5">
+                <i class="fa-solid fa-circle-exclamation text-orange-500"></i> Minimum 1 produk om te kwalifiseer vir Stitch uitcheck.
+              </div>
+            </div>
+
+            <!-- Right Side: Real-time Free Shipping Ticker & Total -->
+            <div class="lg:w-2/5 p-6 bg-black border border-neutral-900 rounded-xl flex flex-col justify-between text-left relative overflow-hidden">
+              <div class="space-y-4">
+                <!-- Shipping Free Shipping Threshold Bar -->
+                <div class="space-y-2">
+                  <div class="flex justify-between items-center text-[10px] font-mono uppercase tracking-wider text-slate-400">
+                    <span>Gratis Versending Meter</span>
+                    <span id="shipping-percent-lbl" class="text-orange-500 font-black">40%</span>
+                  </div>
+                  <div class="h-3 bg-neutral-900 rounded-full overflow-hidden border border-neutral-800/80 p-0.5">
+                    <div id="shipping-progress" class="h-full bg-orange-500 rounded-full transition-all duration-500" style="width: 40%"></div>
+                  </div>
+                  <!-- Shipping status notification text -->
+                  <p id="shipping-status-msg" class="text-[10px] text-slate-300 italic leading-relaxed min-h-[30px]"></p>
+                </div>
+
+                <!-- Receipt details breakdown -->
+                <div class="space-y-2 border-t border-neutral-900 pt-4 text-xs">
+                  <div class="flex justify-between items-center">
+                    <span class="text-slate-400">Pakkette Subtotaal:</span>
+                    <span id="calc-subtotal" class="font-mono text-white font-bold">R199.00</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-slate-400">Nasionale Koerier:</span>
+                    <span id="calc-shipping" class="font-mono text-orange-500 font-bold">R100.00</span>
+                  </div>
+                  <div class="flex justify-between items-center border-t border-neutral-900 pt-2 text-sm">
+                    <span class="text-white font-bold font-display uppercase tracking-wider">Totale Bestelling:</span>
+                    <span id="calc-total" class="font-mono text-orange-500 font-black text-lg">R299.00</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive checkout CTA button (Remember contrast rule: black text on orange button!) -->
+              <div class="pt-6">
+                <a id="checkout-calc-btn" href="https://stokstyf.co.za/cart/SPEELTYD_COMBO_VARIANT_ID:1?checkout" class="w-full py-4 bg-orange-500 hover:bg-orange-600 text-black font-display font-black text-xs h-12 flex items-center justify-center uppercase tracking-widest rounded-lg transition-all duration-300 gap-2 border border-orange-500 shadow-md">
+                  BESTEL JOU MANDJIE NOU <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: DIE WOEMA FORMULE GRID (PRODUCT INHOUD) -->
+    <section id="formule" class="py-20 lg:py-28 bg-[#0a0a0c] border-y border-neutral-900 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-orange-950/30 border border-orange-500/20 text-[10px] text-orange-500 font-mono tracking-widest uppercase rounded-full">
+            KRACHTIGE MANLIKE ARSENAAL
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-white">
+            Die Woema Formules
+          </h2>
+          <p class="text-slate-400 text-sm">
+            Ons kliniese range kombineer kragtige biochemie met getoetste manlike kruie-ekstrakte vir 'n multi-dimensionele hupstoot aan jou stamina en selfvertroue.
+          </p>
+        </div>
+
+        <!-- 4-Column breakdown grid of products -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Product item 1 -->
+          <div class="bg-neutral-950 border border-neutral-900 rounded-xl p-6 flex flex-col justify-between transition-all duration-300 hover:border-orange-500/30 group">
+            <div class="space-y-4">
+              <div class="w-12 h-12 bg-orange-950/40 border border-orange-500/20 text-orange-500 rounded-lg flex items-center justify-center text-xl group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-black transition-all">
+                <i class="fa-solid fa-calendar-days"></i>
+              </div>
+              <div class="text-left">
+                <h3 class="font-display text-lg font-bold text-white uppercase tracking-wider">Elke Dag Kapsules</h3>
+                <p class="text-xs text-orange-500 font-mono tracking-widest uppercase mt-0.5">Basislyn Krag</p>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed text-left">
+                Wetenskaplik ontwikkel vir alledaagse stamina. Bevorder jou daaglikse baseline-konfident, versterk manlike sirkulasie, en verbeter natuurlike testosteroonsintese op 'n veilige, volhoubare wyse.
+              </p>
+            </div>
+            <div class="pt-6 font-mono text-[10px] text-slate-500 uppercase tracking-widest text-left">
+              1 Kapsule Per Dag
+            </div>
+          </div>
+
+          <!-- Product item 2 -->
+          <div class="bg-neutral-950 border border-neutral-900 rounded-xl p-6 flex flex-col justify-between transition-all duration-300 hover:border-orange-500/30 group">
+            <div class="space-y-4">
+              <div class="w-12 h-12 bg-orange-950/40 border border-orange-500/20 text-orange-500 rounded-lg flex items-center justify-center text-xl group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-black transition-all">
+                <i class="fa-solid fa-mug-hot"></i>
+              </div>
+              <div class="text-left">
+                <h3 class="font-display text-lg font-bold text-white uppercase tracking-wider">Woema Koffie</h3>
+                <p class="text-xs text-orange-500 font-mono tracking-widest uppercase mt-0.5">Môre Aktivering</p>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed text-left">
+                'n Verkwikkende en doeltreffende pre-aksie koffiemengsel geformuleer met uiterste kruie-prestasie boosters vir vinnige fokus en sirkulasie-aktivering sonder die bekende 'stimulant-crash'.
+              </p>
+            </div>
+            <div class="pt-6 font-mono text-[10px] text-slate-500 uppercase tracking-widest text-left">
+              Binne 20 minute gelaai
+            </div>
+          </div>
+
+          <!-- Product item 3 -->
+          <div class="bg-neutral-950 border border-neutral-900 rounded-xl p-6 flex flex-col justify-between transition-all duration-300 hover:border-orange-500/30 group">
+            <div class="space-y-4">
+              <div class="w-12 h-12 bg-orange-950/40 border border-orange-500/20 text-orange-500 rounded-lg flex items-center justify-center text-xl group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-black transition-all">
+                <i class="fa-solid fa-droplet"></i>
+              </div>
+              <div class="text-left">
+                <h3 class="font-display text-lg font-bold text-white uppercase tracking-wider">Woema Jellie</h3>
+                <p class="text-xs text-orange-500 font-mono tracking-widest uppercase mt-0.5">Kits absorbsie</p>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed text-left">
+                Fast-acting orale jellie wat deur die mondslymvliese geabsorbeer word. Bied blitsvinnige opname in die bloedstroom vir daardie onbeplande, spontane en passievolle oomblikke. Nul wagtyd.
+              </p>
+            </div>
+            <div class="pt-6 font-mono text-[10px] text-slate-500 uppercase tracking-widest text-left">
+              100% Onmiddellike Werk
+            </div>
+          </div>
+
+          <!-- Product item 4 -->
+          <div class="bg-neutral-950 border border-neutral-900 rounded-xl p-6 flex flex-col justify-between transition-all duration-300 hover:border-orange-500/30 group">
+            <div class="space-y-4">
+              <div class="w-12 h-12 bg-orange-950/40 border border-orange-500/20 text-orange-500 rounded-lg flex items-center justify-center text-xl group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-black transition-all">
+                <i class="fa-solid fa-pills"></i>
+              </div>
+              <div class="text-left">
+                <h3 class="font-display text-lg font-bold text-white uppercase tracking-wider">Woema Kapsules</h3>
+                <p class="text-xs text-orange-500 font-mono tracking-widest uppercase mt-0.5">Ekstreme Geleenthede</p>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed text-left">
+                Die swaargewig manlike booster geformuleer vir uiterste stamina, maksimale hardheid en uithouvermoë. Voorsien 'n intense sirkulasie-stoot vir wanneer daar absoluut geen ruimte vir foute is nie.
+              </p>
+            </div>
+            <div class="pt-6 font-mono text-[10px] text-slate-500 uppercase tracking-widest text-left">
+              Aand-formule
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: DISKRETE VERSENDING & LOGISTICS ACCORD -->
+    <section id="versending" class="py-20 lg:py-28 bg-[#000] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column Content points -->
+          <div class="lg:col-span-6 space-y-6 text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-orange-950/30 border border-orange-500/20 text-[10px] text-orange-500 font-mono tracking-widest uppercase rounded-full">
+              100% DISKREET GEWAAARBORG
+            </div>
+            <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-white leading-tight">
+              Jou Privaatheid Is Ons Topprioriteit
+            </h2>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Ons verstaan dat nasionale aflewering van manlike aanvullings met uiterste diskresie moet geskied. Daarom het ons 'n lugdigte logistieke protokol ontwikkel saam met Suid-Afrika se beste versendingsvennote. <b class="text-orange-500">Kry gratis diskrete versending op alle bestellings oor R500!</b> Vir bestellings onder R500 geld 'n vaste koeriertarief van R100.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex items-start gap-3">
+                <span class="text-orange-500 text-lg mt-0.5 shrink-0"><i class="fa-solid fa-box-open"></i></span>
+                <div>
+                  <h4 class="text-xs uppercase tracking-wider font-bold text-white font-mono">Geen Stokstyf Handelsmerke</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mt-0.5">
+                    Elke boksie of pakkie kom in 'n gewone bruin koerierboks of swart flyer-sakkie aan. Geen logo's, geen produkname of woorde soos "stamina" of "stokstyf" op die buitekant nie.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-orange-500 text-lg mt-0.5 shrink-0"><i class="fa-solid fa-address-card"></i></span>
+                <div>
+                  <h4 class="text-xs uppercase tracking-wider font-bold text-white font-mono">Gemeenskapsverskaffer Slegs</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mt-0.5">
+                    Die koerier-etiket wys slegs die amptelike verskaffer se naam: <b class="text-white">Veldpharm</b>. Dit lyk soos enige standaard apteek- of aanvullingsaflewering.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-orange-500 text-lg mt-0.5 shrink-0"><i class="fa-solid fa-truck-fast"></i></span>
+                <div>
+                  <h4 class="text-xs uppercase tracking-wider font-bold text-white font-mono">Nasionale Premium Vennootskappe</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mt-0.5">
+                    Ons stuur met vinnige koerierdienste soos <b class="text-white">The Courier Guy</b>, <b class="text-white">Fastway</b>, en veilige <b class="text-white">Pargo</b>-afhaalpunte. Aflewering in hoofsentra neem slegs 2-4 werksdae.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- INTERACTIVE ESTIMATED DELIVERY TIMES CALCULATOR -->
+            <div class="bg-neutral-950 border border-neutral-900 rounded-xl p-5 mt-6 relative overflow-hidden">
+              <div class="absolute top-0 left-0 w-1.5 h-full bg-orange-500"></div>
+              <h4 class="text-xs font-mono uppercase tracking-wider text-orange-500 font-bold mb-3">Vinnige Versendingsrekenaar</h4>
+              <p class="text-xs text-slate-400 mb-4">Kies jou provinsie om afleweringstye en diskresie-status dadelik te sien:</p>
+              
+              <div class="flex flex-col sm:flex-row gap-3">
+                <select id="province-select" onchange="calculateShipping()" class="bg-black border border-neutral-800 text-slate-300 rounded px-3 py-2 text-xs focus:outline-none focus:border-orange-500 grow font-sans">
+                  <option value="gauteng">Gauteng</option>
+                  <option value="wc">Wes-Kaap (Western Cape)</option>
+                  <option value="kzn">KwaZulu-Natal</option>
+                  <option value="fs">Vrystaat (Free State)</option>
+                  <option value="other">Ander Provinsies / Platteland</option>
+                </select>
+                <div class="bg-black/50 border border-neutral-900 px-4 py-2 rounded text-left min-w-[160px] flex items-center justify-center">
+                  <span id="shipping-result" class="text-xs font-mono text-orange-500 font-bold">Laai status...</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column Interactive JS FAQ Accordion to address customer anxiety -->
+          <div class="lg:col-span-6 space-y-4">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white text-left mb-6 flex items-center gap-2">
+              <span class="text-orange-500"><i class="fa-solid fa-circle-question"></i></span> Logistieke Kliëntevrae
+            </h3>
+
+            <!-- Accordion FAQ Card 1 -->
+            <div class="bg-neutral-950 border border-neutral-900 rounded-lg overflow-hidden transition-all duration-300">
+              <button onclick="toggleAccordion('faq1')" class="w-full px-6 py-4 text-left font-display font-medium text-xs sm:text-sm uppercase tracking-wider text-slate-200 flex justify-between items-center hover:bg-neutral-900/40">
+                <span>Sal die koerierbestuurder of my familie weet wat binne is?</span>
+                <span id="faq1-icon" class="text-orange-500 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div id="faq1" class="hidden px-6 pb-5 text-xs text-slate-400 leading-relaxed text-left border-t border-neutral-900/60 pt-3">
+                Absoluut geen manier nie. Ons verpak elke bestelling self in Gansbaai in 'n gewone, ongemerkte boks of koeriersak. Daar is gee logo's of produkverwysings op die buitekant nie. Op die etiket word die afsender gelys as "Veldpharm", wat soos 'n standaard apteekbestelling lyk.
+              </div>
+            </div>
+
+            <!-- Accordion FAQ Card 2 -->
+            <div class="bg-neutral-950 border border-neutral-900 rounded-lg overflow-hidden transition-all duration-300">
+              <button onclick="toggleAccordion('faq2')" class="w-full px-6 py-4 text-left font-display font-medium text-xs sm:text-sm uppercase tracking-wider text-slate-200 flex justify-between items-center hover:bg-neutral-900/40">
+                <span>Watter koerierdienste gebruik julle vir versending?</span>
+                <span id="faq2-icon" class="text-orange-500 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div id="faq2" class="hidden px-6 pb-5 text-xs text-slate-400 leading-relaxed text-left border-t border-neutral-900/60 pt-3">
+                Ons werk hoofsaaklik met The Courier Guy en Fastway vir aflewerings direk na jou huis of kantoor. As jy nie jou regte adres wil gee nie, kan jy jou pakkie laat stuur na die naaste veilige Pargo-afhaalpunt (by winkels soos Clicks of FreshStop) en dit afhaal wanneer dit jou pas.
+              </div>
+            </div>
+
+            <!-- Accordion FAQ Card 3 -->
+            <div class="bg-neutral-950 border border-neutral-900 rounded-lg overflow-hidden transition-all duration-300">
+              <button onclick="toggleAccordion('faq3')" class="w-full px-6 py-4 text-left font-display font-medium text-xs sm:text-sm uppercase tracking-wider text-slate-200 flex justify-between items-center hover:bg-neutral-900/40">
+                <span>Wat gebeur as ek nie by die huis is vir aflewering nie?</span>
+                <span id="faq3-icon" class="text-orange-500 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div id="faq3" class="hidden px-6 pb-5 text-xs text-slate-400 leading-relaxed text-left border-t border-neutral-900/60 pt-3">
+                Die koerier sal jou altyd per SMS of oproep kontak op die oggend van aflewering om 'n tydgleuf te reël. Jy kan ook op daardie tydstip met die bestuurder reël om die pakkie op 'n veilige plek by jou huis te los of dit vir 'n kollega of sekuriteitswag te gee.
+              </div>
+            </div>
+
+            <!-- Accordion FAQ Card 4 -->
+            <div class="bg-neutral-950 border border-neutral-900 rounded-lg overflow-hidden transition-all duration-300">
+              <button onclick="toggleAccordion('faq4')" class="w-full px-6 py-4 text-left font-display font-medium text-xs sm:text-sm uppercase tracking-wider text-slate-200 flex justify-between items-center hover:bg-neutral-900/40">
+                <span>Hoe word betalings gedoen en is dit veilig?</span>
+                <span id="faq4-icon" class="text-orange-500 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div id="faq4" class="hidden px-6 pb-5 text-xs text-slate-400 leading-relaxed text-left border-t border-neutral-900/60 pt-3">
+                Alle betalings word verwerk deur veilige, Stitch-enkripsie-bedieners. Jy kan kies om met jou debiet/kredietkaart, kits-EFT, of amptelike bankoordrag te betaal. Jou finansiële inligting word nooit op ons bedieners gestoor nie.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: PROFESSIONAL COMPLIANCE FOOTER -->
+    <footer class="bg-neutral-950 border-t border-neutral-900 pt-16 pb-8 text-slate-400">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16">
+          
+          <!-- Column 1: Corporate Ledger (Width: 3/12) -->
+          <div class="lg:col-span-3 space-y-4 text-left">
+            <span class="font-display font-extrabold text-xl tracking-tighter text-white uppercase block">
+              STOKSTYF<span class="text-orange-500">.</span>
+            </span>
+            <p class="text-xs leading-relaxed text-slate-500">
+              Geproduseer en gedistribueer onder die eksklusiewe toesig van Veldpharm Nasionale Gezondheidsgroep.
+            </p>
+            <div class="text-xs space-y-1">
+              <p class="font-bold text-slate-300 uppercase font-mono text-[10px]">Geregistreerde Entiteit:</p>
+              <p class="text-slate-400 text-xs">Veldpharm Corp (Suid-Afrika)</p>
+              <p class="font-bold text-slate-300 uppercase font-mono text-[10px] mt-2">Physical / Postal Area:</p>
+              <p class="text-slate-400 text-xs">85 Park Street, Gansbaai, WC, 7220, ZA</p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quicklinks (Width: 2/12) -->
+          <div class="lg:col-span-2 space-y-4 text-left">
+            <h4 class="font-mono text-xs uppercase tracking-widest text-white font-bold">Skakels</h4>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a href="#hero" class="hover:text-orange-500 transition-colors">Hero Sone</a>
+              </li>
+              <li>
+                <a href="#kombinasies" class="hover:text-orange-500 transition-colors">Combo Pakkette</a>
+              </li>
+              <li>
+                <a href="#formule" class="hover:text-orange-500 transition-colors">Woema Formule</a>
+              </li>
+              <li>
+                <a href="#versending" class="hover:text-orange-500 transition-colors">Diskrete Versending</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Help Desk (Width: 4/12) -->
+          <div class="lg:col-span-4 space-y-4 text-left">
+            <h4 class="font-mono text-xs uppercase tracking-widest text-white font-bold">Helpdesk &amp; Ondersteuning</h4>
+            <div class="space-y-3 text-xs">
+              <div class="flex items-center gap-2">
+                <span class="text-orange-500"><i class="fa-solid fa-phone"></i></span>
+                <span>Sentraal Admin Helpline: <a href="tel:0219396390" class="hover:text-white font-mono text-neutral-200">021 939 6390</a></span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-orange-500"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                <span>Selfoon &amp; Dringende Vrae: <a href="tel:0766587556" class="hover:text-white font-mono text-neutral-200">076 658 7556</a></span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="text-orange-500"><i class="fa-regular fa-envelope"></i></span>
+                <span>Compliance E-pos: <a href="mailto:stokstyf@veldpharm.co.za" class="hover:text-white font-mono text-neutral-200">stokstyf@veldpharm.co.za</a></span>
+              </div>
+              <p class="text-[10px] text-slate-500 leading-normal mt-1">
+                Kantoorure: Maandag - Vrydag: 08:00 tot 17:00. Kontak ons vir enige uiterste logistieke of mediese navrae.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 4: Trust & Socials (Width: 3/12) -->
+          <div class="lg:col-span-3 space-y-4 text-left">
+            <h4 class="font-mono text-xs uppercase tracking-widest text-white font-bold">Sekuriteit &amp; Sosiaal</h4>
+            <div class="space-y-3.5">
+              <!-- Secure Payment Badge representation, styling in orange tones, STRICTLY NO GREEN! -->
+              <div class="bg-black/50 border border-orange-500/30 rounded-lg p-3 flex items-center gap-2.5">
+                <span class="text-orange-500 text-xl"><i class="fa-solid fa-shield-halved"></i></span>
+                <div class="leading-tight">
+                  <p class="text-[10px] font-mono tracking-wider font-bold text-white uppercase">SECURE CHECKOUT</p>
+                  <p class="text-[9px] text-slate-400">Stitch Encrypted Integration</p>
+                </div>
+              </div>
+
+              <!-- Social links explicitly mapped -->
+              <div class="flex items-center gap-3">
+                <a href="https://www.facebook.com/profile.php?id=61580037581116" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-neutral-900 hover:bg-orange-500 hover:text-black text-slate-300 rounded-lg flex items-center justify-center text-base transition-all duration-300">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/stokstyf_in_die_onderlyf" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-neutral-900 hover:bg-orange-500 hover:text-black text-slate-300 rounded-lg flex items-center justify-center text-base transition-all duration-300">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <span class="text-[10px] font-mono text-slate-500 uppercase tracking-widest">@stokstyf</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Relative Shopify Policy Pipes Bottom -->
+        <div class="border-t border-neutral-900 pt-8 pb-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+          <p class="order-2 md:order-1 font-mono text-[10px]">
+            &copy; 2026 Stokstyf Supplemente. Alle opsigte voorbehou. Veldpharm Groep.
+          </p>
+          <div class="order-1 md:order-2 flex flex-wrap gap-4 justify-center md:justify-end text-[10px] font-mono uppercase tracking-wider">
+            <button onclick="openPolicy('privacy')" class="hover:text-orange-500 transition-colors cursor-pointer bg-transparent border-0 p-0 text-[10px] font-mono uppercase tracking-wider">Privacy Policy</button>
+            <span>&bull;</span>
+            <button onclick="openPolicy('terms')" class="hover:text-orange-500 transition-colors cursor-pointer bg-transparent border-0 p-0 text-[10px] font-mono uppercase tracking-wider">Terms of Service</button>
+            <span>&bull;</span>
+            <button onclick="openPolicy('shipping')" class="hover:text-orange-500 transition-colors cursor-pointer bg-transparent border-0 p-0 text-[10px] font-mono uppercase tracking-wider">Shipping Policy</button>
+          </div>
+        </div>
+
+        <!-- MANDATORY SAHPRA COMPLIANCE STATEMENT BLOCK -->
+        <div class="mt-4 border border-neutral-800/80 bg-neutral-950/50 p-4 rounded-xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-left max-w-4xl mx-auto">
+          <span class="block font-mono tracking-widest text-[9px] uppercase font-bold text-orange-500/80 mb-2">SAHPRA WETENSKAPLIKE VRYWARING (DISCLAIMER)</span>
+          <p>
+            The statements, product descriptions, and lifestyle combinations found on this site have not been evaluated by the South African Health Products Regulatory Authority (SAHPRA). The Stokstyf product matrix—including our daily capsules, Woema oral jellies, and performance coffee blends—is classified as a range of complementary health supplements. These products are intended solely for general vitality, stamina, and lifestyle enhancement. Under no circumstances are these products intended to diagnose, treat, prevent, or cure any medical dysfunction, disease, or cardiovascular condition.
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- POLICY MODAL OVERLAY -->
+    <div id="policy-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/95 backdrop-blur-xl transition-all duration-300">
+      <div class="relative w-full max-w-4xl max-h-[85vh] p-6 sm:p-8 mx-4 bg-neutral-950 border border-neutral-800 rounded-2xl shadow-[0_0_50px_rgba(249,115,22,0.15)] flex flex-col overflow-hidden">
+        
+        <!-- Modal header with selectors -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-neutral-900 pb-4 mb-6">
+          <div>
+            <h3 class="font-display text-xl font-black text-white uppercase tracking-wider flex items-center gap-2">
+              <span class="text-orange-500"><i class="fa-solid fa-file-contract"></i></span> Offisiële Beleide <span class="text-neutral-500 text-sm font-normal">/ Policies</span>
+            </h3>
+            <p class="text-[10px] font-mono text-orange-500 uppercase tracking-widest mt-0.5">Veldpharm Nasionale Groep</p>
+          </div>
+          <!-- Selection buttons -->
+          <div class="flex flex-wrap gap-2">
+            <button id="tab-privacy" onclick="switchPolicyTab('privacy')" class="px-4 py-2 rounded-lg font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 bg-orange-500 text-black border border-orange-500 cursor-pointer">
+              Privacy
+            </button>
+            <button id="tab-terms" onclick="switchPolicyTab('terms')" class="px-4 py-2 rounded-lg font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 bg-neutral-900 hover:bg-neutral-800 text-slate-300 border border-neutral-800 cursor-pointer">
+              Terms of Service
+            </button>
+            <button id="tab-shipping" onclick="switchPolicyTab('shipping')" class="px-4 py-2 rounded-lg font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 bg-neutral-900 hover:bg-neutral-800 text-slate-300 border border-neutral-800 cursor-pointer">
+              Shipping
+            </button>
+          </div>
+        </div>
+
+        <!-- Content scroll box -->
+        <div class="overflow-y-auto pr-2 space-y-6 text-slate-300 text-xs sm:text-sm leading-relaxed text-left grow scroll-smooth" id="policy-modal-body">
+          
+          <!-- PRIVACY POLICY CONTAINER -->
+          <div id="policy-content-privacy" class="space-y-4">
+            <h4 class="font-display text-lg font-bold text-white uppercase border-b border-neutral-900 pb-2">1. Privacy Policy</h4>
+            <p class="font-mono text-[10px] text-orange-500">Last Updated: June 7, 2026</p>
+            <p>
+              Stokstyf operates this store and website, including all related information, content, features, tools, products and services, in order to provide you, the customer, with a curated shopping experience (the "Services"). Stokstyf is powered by Shopify, which enables us to provide the Services to you. This Privacy Policy describes how we collect, use, and disclose your personal information when you visit, use, or make a purchase or other transaction using the Services or otherwise communicate with us.
+            </p>
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4">Personal Information We Collect or Process</h5>
+            <p>
+              When we use the term "personal information," we are referring to information that identifies or can reasonably be linked to you or another person. We may collect or process the following categories of personal information depending on how you interact with the Services:
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><b>Contact details</b> including your name, address, billing address, shipping address, phone number, and email address.</li>
+              <li><b>Financial information</b> including credit/debit card numbers, payment card details, transaction confirmations, and other invoicing details.</li>
+              <li><b>Account information</b> including your username, password, security questions, preference configurations, and site settings.</li>
+              <li><b>Transaction information</b> including the items you view, put in your cart, add to your wishlist, purchase, return, or cancel.</li>
+              <li><b>Communications with us</b> including the information you include in customer support inquiries or emails.</li>
+              <li><b>Device information</b> including IP address, browser type, network connection, and unique device identifiers.</li>
+            </ul>
+
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4 font-bold">How We Use Your Personal Information</h5>
+            <p>
+              We use your personal information for purposes including: providing, tailoring, and improving the Services; delivering secure transactions, processing payments and coordinating shipping; marketing and advertising products matching your profile; detecting, preventing and investigating fraud or unauthorized activities; and complying with legal process.
+            </p>
+
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4 font-bold">Shipment and Service Partners</h5>
+            <p>
+              We share relevant shipping details with licensed logistics networks (including The Courier Guy, Fastway, and Pargo) to ensure safe, discrete delivery of your Stokstyf order under the parent label Veldpharm.
+            </p>
+            
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4 font-bold">Compliance Contacts</h5>
+            <p>
+              Registrar Name: Veldpharm<br>
+              Physical/Postal Communications Area: Cape Town, South Africa<br>
+              Email: <a href="mailto:stokstyf@veldpharm.co.za" class="text-orange-500">stokstyf@veldpharm.co.za</a><br>
+              Phone: 021 939 6390 / 076 658 7556
+            </p>
+          </div>
+
+          <!-- TERMS OF SERVICE CONTAINER -->
+          <div id="policy-content-terms" class="hidden space-y-4">
+            <h4 class="font-display text-lg font-bold text-white uppercase border-b border-neutral-900 pb-2">2. Terms of Service</h4>
+            <p class="font-mono text-[10px] text-orange-500">Last Updated: June 7, 2026</p>
+            <p>
+              This website is operated by Veldpharm. Throughout the site, the terms “we”, “us” and “our” refer to Veldpharm and its product lines (including Stokstyf). By visiting our site and/or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”).
+            </p>
+            
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4">1. Online Store Terms</h5>
+            <p>
+              By agreeing to these Terms of Service, you represent that you are at least 18 years of age. Because certain lifestyle formulations on this platform are designed strictly for adult use, you confirm your age during verification. You may not use our products for any illegal or unauthorized purpose.
+            </p>
+
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4">2. General Conditions &amp; Encrypted Payment</h5>
+            <p>
+              We reserve the right to refuse service to anyone at any time. Your credit card and payment processing steps are always encrypted during transmission over secure gateway networks (such as Stitch, Payfast, or Yoco).
+            </p>
+
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4">3. Medical &amp; Health Disclaimer (Critical Protection)</h5>
+            <p>
+              The products and lifestyle configurations listed on this site have not been evaluated by the South African Health Products Regulatory Authority (SAHPRA). They are considered complementary lifestyle wellness supplements and are intended solely to support stamina, vitality, and male performance. They are not intended under any condition to treat, diagnose, prevent, or cure chronic illness, cardiovascular disease, or erectile dysfunction.
+            </p>
+
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4">4. Trademark, Intellectual Property, &amp; Branding Rights</h5>
+            <p>
+              All proprietary graphics, logos, product names, text layouts, and brand concepts (including Die Staatmakers, Heeltyd Speeltyd, Woema, and Stokstyf) are the exclusive intellectual property of Veldpharm New 2026. Any unauthorized reproduction, duplication, mirroring, or distribution of our brand property, product imagery, or copy frameworks for commercial or alternative retail purposes without express written consent from our legal registry is strictly prohibited and subject to legal action under South African intellectual property statutory law.
+            </p>
+
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4">5. Limitation of Liability</h5>
+            <p>
+              In no case shall Veldpharm, our directors, employees, affiliates, or contractors be liable for any injury, loss, claim, or any direct, indirect, incidental, or consequential damages of any kind arising from your use of the service or products.
+            </p>
+            
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4">6. Governing Law</h5>
+            <p>
+              These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of South Africa.
+            </p>
+          </div>
+
+          <!-- SHIPPING POLICY CONTAINER -->
+          <div id="policy-content-shipping" class="hidden space-y-4">
+            <h4 class="font-display text-lg font-bold text-white uppercase border-b border-neutral-900 pb-2">3. Shipping &amp; Delivery Policy</h4>
+            <p class="font-mono text-[10px] text-orange-500">Discrete Delivery Guarantee</p>
+            <p>
+              At Stokstyf, we believe that your privacy is just as critical as your performance. We guarantee a 100% discrete packaging and shipping process for every order.
+            </p>
+
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4">1. Discrete Packaging Protocol</h5>
+            <p>
+              All shipments arrive in a plain, unbranded brown cardboard box or dark, solid courier flyer pouch. There is absolutely no reference to "Stokstyf", "Stamina", "Erection", "Sex", or specific product contents on the exterior of the parcel. The shipping label strictly reads the dispatcher group name: <b>Veldpharm</b>.
+            </p>
+
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4">2. Shipping Rates &amp; Delivery Speeds</h5>
+            <p>
+              We ship to all postcodes and addresses across South Africa. Orders over R500 qualify for 100% free shipping, while orders under R500 are subject to a flat fee of R100. Standard delivery takes:
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><b>Main Centers (JHB, PTA, CPT, DBN):</b> 2 to 4 business days.</li>
+              <li><b>Regional &amp; Outlying Areas:</b> 3 to 5 business days.</li>
+              <li><b>Pargo Pick-up Points:</b> Available at partner retailers (Clicks, FreshStop) if you prefer not to use your home address.</li>
+            </ul>
+
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs font-mono mt-4">3. Tracking &amp; Support</h5>
+            <p>
+              Upon dispatch, you will receive a secure tracking token via SMS or email. If you have any inquiries, you can reach our logistics desk at <b>021 939 6390</b> or WhatsApp <b>076 658 7556</b>.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Modal footer with close button -->
+        <div class="border-t border-neutral-900 pt-4 mt-6 flex justify-end">
+          <button onclick="closePolicy()" class="px-6 py-3 bg-neutral-900 hover:bg-neutral-800 text-white font-display text-xs font-bold uppercase tracking-wider rounded-lg transition-all duration-300 border border-neutral-800 cursor-pointer">
+            Sluit Venster <span class="text-slate-500 font-normal">/ Close</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FAKE LIVE RECENT SALES POPUP (CRO Trust Driver Widget) -->
+    <div id="live-sales-popup" class="fixed bottom-4 left-4 z-40 bg-neutral-950 border border-neutral-800/80 p-3.5 sm:p-4 rounded-xl shadow-2xl transition-all duration-500 translate-y-24 opacity-0 flex items-center gap-3 max-w-[280px] sm:max-w-xs relative overflow-hidden">
+      <!-- Top neon accent line -->
+      <div class="absolute top-0 left-0 w-full h-0.5 bg-orange-500"></div>
+      <div class="w-8 h-8 rounded-full bg-orange-950/60 border border-orange-500/20 text-orange-500 flex items-center justify-center text-sm shrink-0">
+        <i class="fa-solid fa-truck-fast"></i>
+      </div>
+      <div class="text-left leading-normal">
+        <p class="text-[10px] font-mono uppercase font-bold text-orange-500">Nuutste Bestelling</p>
+        <p id="sales-message" class="text-xs text-slate-300 font-medium mt-0.5">Laai bestelling...</p>
+        <p id="sales-time" class="text-[9px] font-mono text-slate-500 mt-1">Sopas nou</p>
+      </div>
+    </div>
+
+
+    <!-- VANILLA JAVASCRIPT CONVERSIONS CONTROLLER -->
+    <script>
+      // 1. Age Gate Accept Logic
+      function acceptAge() {
+        const ageGate = document.getElementById('age-gate');
+        ageGate.style.opacity = '0';
+        ageGate.style.transition = 'opacity 0.5s ease-out';
+        setTimeout(() => {
+          ageGate.style.display = 'none';
+        }, 500);
+        // Save state to localStorage to prevent repetitive gate showing
+        localStorage.setItem('stokstyfAgeVerified', 'true');
+      }
+
+      // Check verification state on page load
+      window.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('stokstyfAgeVerified') === 'true') {
+          document.getElementById('age-gate').style.display = 'none';
+        }
+        
+        // Start timers
+        startCountdown();
+        calculateShipping();
+        scheduleLiveSales();
+        updateBasketCalculator();
+      });
+
+      // 2. Real-Time Countdown Timer (15 Minutes Rolling Reset)
+      function startCountdown() {
+        let totalSeconds = 14 * 60 + 42; // Starts at 14m 42s
+        const display = document.getElementById('countdown');
+        
+        const interval = setInterval(() => {
+          let minutes = Math.floor(totalSeconds / 60);
+          let seconds = totalSeconds % 60;
+          
+          minutes = minutes < 10 ? '0' + minutes : minutes;
+          seconds = seconds < 10 ? '0' + seconds : seconds;
+          
+          display.textContent = `${minutes}:${seconds}`;
+          
+          if (totalSeconds <= 0) {
+            // Loop or keep at 00:09 to maintain urgency
+            totalSeconds = 14 * 60 + 42; 
+          } else {
+            totalSeconds--;
+          }
+        }, 1000);
+      }
+
+      // 3. Interactive Shipping Estimator Logic
+      function calculateShipping() {
+        const province = document.getElementById('province-select').value;
+        const resultSpan = document.getElementById('shipping-result');
+        
+        const deliveryData = {
+          gauteng: 'The Courier Guy (1-2 Werksdae) &bull; R100 (Gratis oor R500)',
+          wc: 'Courier Guy / Fastway (2-3 Werksdae) &bull; R100 (Gratis oor R500)',
+          kzn: 'Courier Service Express (2 Werksdae) &bull; R100 (Gratis oor R500)',
+          fs: 'Courier Guy / Pargo (2-3 Werksdae) &bull; R100 (Gratis oor R500)',
+          other: 'Nasionale Netwerke (3-4 Werksdae) &bull; R100 (Gratis oor R500)'
+        };
+        
+        resultSpan.innerHTML = deliveryData[province] || deliveryData['other'];
+      }
+
+      // 3.5. Interactive Basket Calculator (CRO Conversion Booster & Free Shipping Tracker)
+      let basketState = {
+        staatmaker: 0,
+        speeltyd: 1
+      };
+
+      function updateBasketCalculator() {
+        const PRICE_STAATMAKER = 299;
+        const PRICE_SPEELTYD = 199;
+        const FREE_SHIPPING_LIMIT = 500;
+        const FLAT_SHIPPING_FEE = 100;
+
+        const subtotal = (basketState.staatmaker * PRICE_STAATMAKER) + (basketState.speeltyd * PRICE_SPEELTYD);
+        
+        let shipping = 0;
+        if (subtotal > 0) {
+          shipping = subtotal >= FREE_SHIPPING_LIMIT ? 0 : FLAT_SHIPPING_FEE;
+        }
+
+        const total = subtotal + shipping;
+
+        // Update UI HTML value nodes
+        document.getElementById('staatmaker-qty').textContent = basketState.staatmaker;
+        document.getElementById('speeltyd-qty').textContent = basketState.speeltyd;
+
+        document.getElementById('calc-subtotal').textContent = `R${subtotal.toFixed(2)}`;
+        document.getElementById('calc-shipping').textContent = subtotal === 0 ? 'R0.00' : (shipping === 0 ? 'R0.00 (GRATIS)' : `R${shipping.toFixed(2)}`);
+        document.getElementById('calc-total').textContent = `R${total.toFixed(2)}`;
+
+        // Process custom free shipping progress bar 
+        const progressRawPercentage = subtotal === 0 ? 0 : (subtotal / FREE_SHIPPING_LIMIT) * 100;
+        const progressPercent = Math.min(progressRawPercentage, 100);
+        
+        document.getElementById('shipping-progress').style.width = `${progressPercent}%`;
+        document.getElementById('shipping-percent-lbl').textContent = `${Math.round(progressPercent)}%`;
+
+        const msgElement = document.getElementById('shipping-status-msg');
+        if (subtotal === 0) {
+          msgElement.innerHTML = `Voeg produkte by om nasionale aflewering te aktiveer.`;
+        } else if (subtotal >= FREE_SHIPPING_LIMIT) {
+          msgElement.innerHTML = `<span class="text-orange-500 font-bold"><i class="fa-solid fa-plane"></i> Kwalifiseer</span> - Jou bestelling oorskry R500! Jy kry <b>KOSTELOOS diskrete nasionale versending</b> op hierdie bestelling.`;
+        } else {
+          const gap = FREE_SHIPPING_LIMIT - subtotal;
+          msgElement.innerHTML = `Spaar R${FLAT_SHIPPING_FEE}! Voeg nog slegs <span class="text-orange-400 font-bold font-mono">R${gap.toFixed(2)}</span> se produkte by om te kwalifiseer van <b>GRATIS AFLEWERING</b>.`;
+        }
+
+        // Generate precise multi-item Shopify checkout link dynamically
+        let cartLink = '';
+        if (basketState.staatmaker > 0 && basketState.speeltyd > 0) {
+          cartLink = `https://stokstyf.co.za/cart/STAATMAKER_COMBO_VARIANT_ID:${basketState.staatmaker},SPEELTYD_COMBO_VARIANT_ID:${basketState.speeltyd}?checkout`;
+        } else if (basketState.staatmaker > 0) {
+          cartLink = `https://stokstyf.co.za/cart/STAATMAKER_COMBO_VARIANT_ID:${basketState.staatmaker}?checkout`;
+        } else if (basketState.speeltyd > 0) {
+          cartLink = `https://stokstyf.co.za/cart/SPEELTYD_COMBO_VARIANT_ID:${basketState.speeltyd}?checkout`;
+        } else {
+          cartLink = '#kombinasies';
+        }
+
+        const btn = document.getElementById('checkout-calc-btn');
+        btn.href = cartLink;
+        if (subtotal === 0) {
+          btn.classList.add('opacity-40', 'pointer-events-none');
+          btn.innerHTML = `MANDJIE IS LEEG <i class="fa-solid fa-shopping-bag"></i>`;
+        } else {
+          btn.classList.remove('opacity-40', 'pointer-events-none');
+          btn.innerHTML = `BESTEL JOU MANDJIE NOU <i class="fa-solid fa-cart-shopping"></i>`;
+        }
+      }
+
+      function changeBasketQty(itemKey, delta) {
+        basketState[itemKey] = Math.max((basketState[itemKey] || 0) + delta, 0);
+        // Cap max quantity to 20 for safety
+        if (basketState[itemKey] > 20) basketState[itemKey] = 20;
+        updateBasketCalculator();
+      }
+
+      // 4. Vanilla Accordion Toggle Logic
+      function toggleAccordion(faqId) {
+        const faqElement = document.getElementById(faqId);
+        const iconElement = document.getElementById(`${faqId}-icon`);
+        
+        // Hide all others
+        const allFaqs = ['faq1', 'faq2', 'faq3', 'faq4'];
+        allFaqs.forEach(id => {
+          if (id !== faqId) {
+            document.getElementById(id).classList.add('hidden');
+            document.getElementById(`${id}-icon`).classList.remove('rotate-180');
+          }
+        });
+        
+        // Toggle current
+        if (faqElement.classList.contains('hidden')) {
+          faqElement.classList.remove('hidden');
+          iconElement.classList.add('rotate-180');
+        } else {
+          faqElement.classList.add('hidden');
+          iconElement.classList.remove('rotate-180');
+        }
+      }
+
+      // 5. Fake Recent Sales Trigger Node loop (CRO Social Proof)
+      const mockSales = [
+        { name: "Johan van Pretoria", pack: "Heeltyd Speeltyd Combo", time: "2 minute gelede" },
+        { name: "Sipho van Sandton", pack: "Die Staatmaker Combo Pack", time: "5 minute gelede" },
+        { name: "Koos van Bellville", pack: "Heeltyd Speeltyd Combo", time: "1 minuut gelede" },
+        { name: "Deon van Durban", pack: "Die Staatmaker Combo Pack", time: "7 minute gelede" },
+        { name: "William van Bloemfontein", pack: "Heeltyd Speeltyd Combo", time: "3 minute gelede" },
+        { name: "Dawie van Port Elizabeth", pack: "Die Staatmaker Combo Pack", time: "4 minute gelede" },
+        { name: "Gerrit van Hermanus", pack: "Heeltyd Speeltyd Combo", time: "9 minute gelede" }
+      ];
+
+      function scheduleLiveSales() {
+        const popup = document.getElementById('live-sales-popup');
+        const message = document.getElementById('sales-message');
+        const time = document.getElementById('sales-time');
+        
+        let index = 0;
+        
+        function showNotification() {
+          const sale = mockSales[index];
+          message.innerHTML = `<b>${sale.name}</b> het sopas die <b>${sale.pack}</b> bestel!`;
+          time.textContent = sale.time;
+          
+          // Show popup
+          popup.classList.remove('translate-y-24', 'opacity-0');
+          popup.classList.add('translate-y-0', 'opacity-100');
+          
+          // Hide after 5 seconds
+          setTimeout(() => {
+            popup.classList.remove('translate-y-0', 'opacity-100');
+            popup.classList.add('translate-y-24', 'opacity-0');
+            
+            // Go to next
+            index = (index + 1) % mockSales.length;
+            
+            // Loop next notification in 15 seconds
+            setTimeout(showNotification, 15000);
+          }, 5000);
+        }
+        
+        // Initial delay for first notification
+        setTimeout(showNotification, 8000);
+      }
+
+      // 6. Policy Modal Interactivity
+      function openPolicy(policyType) {
+        const modal = document.getElementById('policy-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        switchPolicyTab(policyType);
+      }
+
+      function closePolicy() {
+        const modal = document.getElementById('policy-modal');
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+      }
+
+      function switchPolicyTab(policyType) {
+        const tabs = ['privacy', 'terms', 'shipping'];
+        tabs.forEach(t => {
+          const content = document.getElementById(`policy-content-${t}`);
+          const btn = document.getElementById(`tab-${t}`);
+          if (t === policyType) {
+            content.classList.remove('hidden');
+            btn.classList.add('bg-orange-500', 'text-black', 'border-orange-500');
+            btn.classList.remove('bg-neutral-900', 'text-slate-300', 'border-neutral-800');
+          } else {
+            content.classList.add('hidden');
+            btn.classList.remove('bg-orange-500', 'text-black', 'border-orange-500');
+            btn.classList.add('bg-neutral-900', 'text-slate-300', 'border-neutral-800');
+          }
+        });
+        
+        // Scroll the contents of the modal back to top
+        document.getElementById('policy-modal-body').scrollTop = 0;
+      }
+
+      // Header background scroll state decoration
+      window.addEventListener('scroll', () => {
+        const header = document.getElementById('sticky-header');
+        if (window.scrollY > 50) {
+          header.classList.add('shadow-[0_10px_30px_rgba(0,0,0,0.8)]', 'border-orange-500/10');
+        } else {
+          header.classList.remove('shadow-[0_10px_30px_rgba(0,0,0,0.8)]', 'border-orange-500/10');
+        }
+      });
+    </script>
+  </body>
+</html>
